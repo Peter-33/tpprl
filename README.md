@@ -61,8 +61,7 @@ Reads output produced by `train-broadcasting.py` and compares it against baselin
 This script is used for running the Spaced Repetition experiment:
 
     mkdir -p output-spaced-repetition;
-    python train-teaching.py ./data/initial-difficulty.csv 0.049 0.0052 ./output-spaced-repetition \
-        --q 0.0001 --q-entropy 0.005
+    python train-teaching.py ./data/initial_difficulty.csv 0.049 0.0052 ./output-spaced-repetition --q 0.0001 --q-entropy 0.005
 
 
 If the training gets stuck on 0 reward, then training an initial version `--with-recall-probs` as reward instead of binary reward, and/or increasing the `batch_size` may help.
